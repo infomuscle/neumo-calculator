@@ -12,19 +12,16 @@ import Foundation
 class ViewController: UIViewController {
     
     var result: Int = 0
-    var tempStr: String = ""
+    var tempStr1: String = ""
     var tempStr2: String = ""
-    var tempInt: Int = 0
-    
+    var calType: String = ""
     
     @IBOutlet var lblResult: UILabel!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
     @IBAction func btn0(_ sender: UIButton) {
         touchBtnNum(val: "0")
@@ -83,22 +80,89 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnEql(_ sender: UIButton) {
-        touchBtnCal(val: "eql")
+        touchBtnEql()
+    }
+
+    @IBAction func btnAc(_ sender: UIButton) {
+        initCalculator(initLabel: true)
     }
     
+    
+    func labeling(val: String) {
+        lblResult.text = val
+    }
+    
+    func initCalculator(initLabel: Bool) {
+        result = 0
+        tempStr1 = ""
+        tempStr2 = ""
+        calType = ""
+        
+        if initLabel == true {
+            labeling(val: String(result))
+        }
+    }
+
     func touchBtnNum(val: String) {
-        tempStr += val
-        labeling(val: Int(tempStr)!)
+        if calType == "" {
+            tempStr1 += val
+            labeling(val: tempStr1)
+        } else {
+            tempStr2 += val
+            labeling(val: tempStr2)
+        }
+    }
+    
+    func calculator (calType: String) {
+        switch calType {
+        case "add":
+            result = Int(tempStr1)! + Int(tempStr2)!
+            labeling(val: String(result))
+        case "sub":
+            result = Int(tempStr1)! - Int(tempStr2)!
+            labeling(val: String(result))
+        case "mul":
+            result = Int(tempStr1)! * Int(tempStr2)!
+            labeling(val: String(result))
+        case "div":
+            result = Int(tempStr1)! / Int(tempStr2)!
+            labeling(val: String(result))
+        default:
+            break
+        }
     }
     
     func touchBtnCal(val: String) {
-        result += Int(tempStr)!
-        labeling(val: result)
-        tempStr = ""
+        if calType != "" {
+            calculator(calType: calType)
+            
+            tempStr1 = String(result)
+            tempStr2 = ""
+        }
+        
+        calType = val
+        
+        if tempStr2 == "" {
+
+        } else {
+            calculator(calType: calType)
+            
+            tempStr1 = String(result)
+            tempStr2 = ""
+        }
+    
     }
     
-    func labeling(val: Int) {
-        lblResult.text = String(val)
+    func touchBtnEql(){
+        
+        if tempStr2 == "" {
+            
+        } else {
+            calculator(calType: calType)
+        }
+        calType = ""
+        tempStr1 = String(result)
+        tempStr2 = ""
     }
-}
 
+}

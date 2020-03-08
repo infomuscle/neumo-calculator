@@ -19,10 +19,46 @@ class ViewController: UIViewController {
     
     // UI Variables
     @IBOutlet var lblResult: UILabel!
+    
+    @IBOutlet var vBtn1: UIButton!
+    @IBOutlet var vBtn2: UIButton!
+    @IBOutlet var vBtn3: UIButton!
+    @IBOutlet var vBtn4: UIButton!
+    @IBOutlet var vBtn5: UIButton!
+    @IBOutlet var vBtn6: UIButton!
+    @IBOutlet var vBtn7: UIButton!
+    @IBOutlet var vBtn8: UIButton!
+    @IBOutlet var vBtn9: UIButton!
+    @IBOutlet var vBtn0: UIButton!
+    @IBOutlet var vBtn00: UIButton!
 
+    @IBOutlet var vBtnPnt: UIButton!
+    @IBOutlet var vBtnEql: UIButton!
+    @IBOutlet var vBtnAdd: UIButton!
+    @IBOutlet var vBtnSub: UIButton!
+    @IBOutlet var vBtnMul: UIButton!
+    @IBOutlet var vBtnDiv: UIButton!
+    @IBOutlet var vBtnMod: UIButton!
+    @IBOutlet var vBtnPm: UIButton!
+    @IBOutlet var vBtnAc: UIButton!
+    
+    
     // UI Initializing
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
+        
+        for b in buttons {
+            b?.backgroundColor = self.view.backgroundColor
+            b?.layer.shadowOpacity = 1
+            b?.layer.shadowRadius = 2.0
+            b?.layer.shadowOffset = CGSize(width: 3, height: 3)
+//            b?.layer.shadowColor = UIColor(red: 0xD1, green: 0xD9, blue: 0xE6, alpha: 1).cgColor
+            b?.layer.shadowColor = UIColor.gray.cgColor
+            b?.layer.cornerRadius = 2
+        }
+        
     }
 
     // UI Button Actions
@@ -168,5 +204,6 @@ class ViewController: UIViewController {
         input1 = String(result)
         input2 = ""
     }
+
 
 }

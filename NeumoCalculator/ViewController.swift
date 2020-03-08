@@ -11,18 +11,21 @@ import Foundation
 
 class ViewController: UIViewController {
     
+    // Logic Variables
     var result: Int = 0
-    var tempStr1: String = ""
-    var tempStr2: String = ""
+    var input1: String = ""
+    var input2: String = ""
     var calType: String = ""
     
+    // UI Variables
     @IBOutlet var lblResult: UILabel!
 
+    // UI Initializing
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    // UI Button Actions
     @IBAction func btn0(_ sender: UIButton) {
         touchBtnNum(val: "0")
     }
@@ -94,8 +97,8 @@ class ViewController: UIViewController {
     
     func initCalculator(initLabel: Bool) {
         result = 0
-        tempStr1 = ""
-        tempStr2 = ""
+        input1 = ""
+        input2 = ""
         calType = ""
         
         if initLabel == true {
@@ -105,27 +108,27 @@ class ViewController: UIViewController {
 
     func touchBtnNum(val: String) {
         if calType == "" {
-            tempStr1 += val
-            labeling(val: tempStr1)
+            input1 += val
+            labeling(val: input1)
         } else {
-            tempStr2 += val
-            labeling(val: tempStr2)
+            input2 += val
+            labeling(val: input2)
         }
     }
     
-    func calculator (calType: String) {
+    func calculator(calType: String) {
         switch calType {
         case "add":
-            result = Int(tempStr1)! + Int(tempStr2)!
+            result = Int(input1)! + Int(input2)!
             labeling(val: String(result))
         case "sub":
-            result = Int(tempStr1)! - Int(tempStr2)!
+            result = Int(input1)! - Int(input2)!
             labeling(val: String(result))
         case "mul":
-            result = Int(tempStr1)! * Int(tempStr2)!
+            result = Int(input1)! * Int(input2)!
             labeling(val: String(result))
         case "div":
-            result = Int(tempStr1)! / Int(tempStr2)!
+            result = Int(input1)! / Int(input2)!
             labeling(val: String(result))
         default:
             break
@@ -136,33 +139,34 @@ class ViewController: UIViewController {
         if calType != "" {
             calculator(calType: calType)
             
-            tempStr1 = String(result)
-            tempStr2 = ""
+            input1 = String(result)
+            input2 = ""
         }
         
         calType = val
         
-        if tempStr2 == "" {
-
+        if input2 == "" {
+            
+            
         } else {
             calculator(calType: calType)
             
-            tempStr1 = String(result)
-            tempStr2 = ""
+            input1 = String(result)
+            input2 = ""
         }
     
     }
     
     func touchBtnEql(){
         
-        if tempStr2 == "" {
+        if input2 == "" {
             
         } else {
             calculator(calType: calType)
         }
         calType = ""
-        tempStr1 = String(result)
-        tempStr2 = ""
+        input1 = String(result)
+        input2 = ""
     }
 
 }

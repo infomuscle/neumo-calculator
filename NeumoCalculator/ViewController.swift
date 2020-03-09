@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var input2: String = ""
     var calType: String = ""
     
+    @IBOutlet var vvBtn1: UIButton!
+    
     // UI Variables
     @IBOutlet var lblResult: UILabel!
     
@@ -49,25 +51,31 @@ class ViewController: UIViewController {
         
         let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
         
-//        vBtnPm.backgroundColor = self.view.backgroundColor
-//        vBtn1.layer.shadowRadius = 8
-//        vBtn1.layer.shadowOpacity = 14
-//        vBtn1.layer.shadowOffset = CGSize(width: 10, height: 10)
-//        vBtn1.layer.shadowColor = UIColor.systemPink.cgColor
         
-    
-        
-        for b in buttons {
-            b?.backgroundColor = self.view.backgroundColor
-//            b?.layer.cornerRadius = 3.0
+//        for b in buttons {
+//            let layer1 = CALayer()
+//            let layer2 = CALayer()
 //
-//            b?.layer.shadowOpacity = 100
-//            b?.layer.shadowRadius = 3.0
-//            b?.layer.shadowOffset = CGSize(width: 3, height: 3)
-////            b?.layer.shadowColor = UIColor(red: 20.0, green: 20.0, blue: 20.0, alpha: 1.0).cgColor
-//            b?.layer.shadowColor = UIColor.gray.cgColor
-        }
-        
+//            layer1.backgroundColor = self.view.backgroundColor?.cgColor
+//            layer1.frame = vBtn1.bounds
+//            layer1.cornerRadius = 16
+//            layer1.shadowRadius = 3
+//            layer1.shadowOpacity = 1
+//            layer1.shadowOffset = CGSize(width: 3, height: 3)
+//            layer1.shadowColor = UIColor.gray.cgColor
+//    //        layer1.needsDisplayOnBoundsChange = true
+//            b?.layer.insertSublayer(layer1, at: 0)
+//
+//            layer2.backgroundColor = self.view.backgroundColor?.cgColor
+//            layer2.frame = vBtn1.bounds
+//            layer2.cornerRadius = 16
+//            layer2.shadowRadius = 3
+//            layer2.shadowOpacity = 1
+//            layer2.shadowOffset = CGSize(width: -3, height: -3)
+//            layer2.shadowColor = UIColor.white.cgColor
+//    //        layer2.needsDisplayOnBoundsChange = true
+//            b?.layer.insertSublayer(layer2, at: 1)
+//        }
     }
 
     // UI Button Actions

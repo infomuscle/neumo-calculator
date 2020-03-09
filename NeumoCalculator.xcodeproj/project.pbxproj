@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1483963241675C3004021CF /* NeumoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1483962241675C3004021CF /* NeumoButton.swift */; };
+		B148396524168884004021CF /* NeumoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148396424168884004021CF /* NeumoLabel.swift */; };
 		B1E2E1B62413FB0600C110AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2E1B52413FB0600C110AD /* AppDelegate.swift */; };
 		B1E2E1B82413FB0600C110AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2E1B72413FB0600C110AD /* SceneDelegate.swift */; };
 		B1E2E1BA2413FB0600C110AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2E1B92413FB0600C110AD /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1483962241675C3004021CF /* NeumoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumoButton.swift; sourceTree = "<group>"; };
+		B148396424168884004021CF /* NeumoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumoLabel.swift; sourceTree = "<group>"; };
 		B1E2E1B22413FB0600C110AD /* NeumoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeumoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E2E1B52413FB0600C110AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E2E1B72413FB0600C110AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				B1E2E1BE2413FB0700C110AD /* Assets.xcassets */,
 				B1E2E1C02413FB0700C110AD /* LaunchScreen.storyboard */,
 				B1E2E1C32413FB0700C110AD /* Info.plist */,
+				B1483962241675C3004021CF /* NeumoButton.swift */,
+				B148396424168884004021CF /* NeumoLabel.swift */,
 			);
 			path = NeumoCalculator;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1483963241675C3004021CF /* NeumoButton.swift in Sources */,
+				B148396524168884004021CF /* NeumoLabel.swift in Sources */,
 				B1E2E1BA2413FB0600C110AD /* ViewController.swift in Sources */,
 				B1E2E1B62413FB0600C110AD /* AppDelegate.swift in Sources */,
 				B1E2E1B82413FB0600C110AD /* SceneDelegate.swift in Sources */,

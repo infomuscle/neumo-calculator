@@ -49,14 +49,23 @@ class ViewController: UIViewController {
         
         let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
         
+//        vBtnPm.backgroundColor = self.view.backgroundColor
+//        vBtn1.layer.shadowRadius = 8
+//        vBtn1.layer.shadowOpacity = 14
+//        vBtn1.layer.shadowOffset = CGSize(width: 10, height: 10)
+//        vBtn1.layer.shadowColor = UIColor.systemPink.cgColor
+        
+    
+        
         for b in buttons {
             b?.backgroundColor = self.view.backgroundColor
-            b?.layer.shadowOpacity = 1
-            b?.layer.shadowRadius = 2.0
-            b?.layer.shadowOffset = CGSize(width: 3, height: 3)
-//            b?.layer.shadowColor = UIColor(red: 0xD1, green: 0xD9, blue: 0xE6, alpha: 1).cgColor
-            b?.layer.shadowColor = UIColor.gray.cgColor
-            b?.layer.cornerRadius = 2
+//            b?.layer.cornerRadius = 3.0
+//
+//            b?.layer.shadowOpacity = 100
+//            b?.layer.shadowRadius = 3.0
+//            b?.layer.shadowOffset = CGSize(width: 3, height: 3)
+////            b?.layer.shadowColor = UIColor(red: 20.0, green: 20.0, blue: 20.0, alpha: 1.0).cgColor
+//            b?.layer.shadowColor = UIColor.gray.cgColor
         }
         
     }

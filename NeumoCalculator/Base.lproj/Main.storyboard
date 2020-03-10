@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6u5-7H-rCh">
-                                <rect key="frame" x="24" y="240" width="366" height="590"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="6u5-7H-rCh">
+                                <rect key="frame" x="24" y="230" width="366" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idj-Ma-PMB" customClass="NeumoLabel" customModule="NeumoCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="90"/>
@@ -46,14 +46,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-qW-DSv">
-                                        <rect key="frame" x="0.0" y="130" width="366" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-qW-DSv">
+                                        <rect key="frame" x="0.0" y="123" width="366" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xm-vk-8c2" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="0IZ-J1-Ydq"/>
-                                                    <constraint firstAttribute="width" constant="60" id="QSf-Hi-Yso"/>
+                                                    <constraint firstAttribute="height" constant="69" id="7Ow-hQ-myq"/>
+                                                    <constraint firstAttribute="width" constant="69" id="OjL-N5-gUo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="AC">
@@ -108,10 +108,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-6g-EFB" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="101.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="lhF-Ob-feC"/>
-                                                    <constraint firstAttribute="width" constant="60" id="zrg-V9-sn7"/>
+                                                    <constraint firstAttribute="height" constant="69" id="NO1-9c-aLp"/>
+                                                    <constraint firstAttribute="width" constant="69" id="Oes-5q-4TH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="+/-">
@@ -163,10 +163,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr0-yc-Eu4" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="194.5" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="Ab2-sT-zfU"/>
-                                                    <constraint firstAttribute="width" constant="60" id="WBw-na-ff9"/>
+                                                    <constraint firstAttribute="height" constant="69" id="W6r-bO-EKQ"/>
+                                                    <constraint firstAttribute="width" constant="69" id="ZbJ-ke-iRg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="%">
@@ -218,10 +218,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShT-iF-Xhv" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="304.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="292" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="QcP-qk-oux"/>
-                                                    <constraint firstAttribute="height" constant="60" id="n87-9v-3GK"/>
+                                                    <constraint firstAttribute="width" constant="69" id="fvl-mQ-ATy"/>
+                                                    <constraint firstAttribute="height" constant="69" id="uS8-Mx-0iK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="÷">
@@ -277,22 +277,22 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="xr0-yc-Eu4" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="4Vt-a6-wHQ"/>
-                                            <constraint firstItem="ShT-iF-Xhv" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="B4A-UN-h3X"/>
-                                            <constraint firstItem="ShT-iF-Xhv" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="H9R-di-5Yc"/>
-                                            <constraint firstItem="tJG-6g-EFB" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="OeE-Ua-wwO"/>
-                                            <constraint firstItem="xr0-yc-Eu4" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="VZk-Xw-2BC"/>
-                                            <constraint firstItem="tJG-6g-EFB" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="jPf-OR-8Rk"/>
+                                            <constraint firstItem="xr0-yc-Eu4" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="3O3-4p-e25"/>
+                                            <constraint firstItem="tJG-6g-EFB" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="Coa-St-ZZp"/>
+                                            <constraint firstItem="ShT-iF-Xhv" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="OTd-9V-Ij0"/>
+                                            <constraint firstItem="xr0-yc-Eu4" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="V40-CM-Awd"/>
+                                            <constraint firstItem="tJG-6g-EFB" firstAttribute="width" secondItem="4Xm-vk-8c2" secondAttribute="width" id="mcw-AF-jK6"/>
+                                            <constraint firstItem="ShT-iF-Xhv" firstAttribute="height" secondItem="4Xm-vk-8c2" secondAttribute="height" id="wER-Ya-D7U"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="5n8-kE-kt5">
-                                        <rect key="frame" x="0.0" y="230" width="366" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="5n8-kE-kt5">
+                                        <rect key="frame" x="0.0" y="225" width="366" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcQ-G1-YeH" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="M5g-wQ-0lA"/>
-                                                    <constraint firstAttribute="height" constant="60" id="r5o-O2-HdX"/>
+                                                    <constraint firstAttribute="height" constant="69" id="Rqe-d2-OBc"/>
+                                                    <constraint firstAttribute="width" constant="69" id="diZ-aZ-qfw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="7">
@@ -347,10 +347,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDQ-Gc-h7c" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="101.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="OUd-HL-wNJ"/>
-                                                    <constraint firstAttribute="height" constant="60" id="Ora-Z6-3IH"/>
+                                                    <constraint firstAttribute="width" constant="69" id="jlR-bF-PKu"/>
+                                                    <constraint firstAttribute="height" constant="69" id="v7R-dc-xlL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="8">
@@ -405,10 +405,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Url-Yp-36K" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="194.5" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="ayU-0T-fwn"/>
-                                                    <constraint firstAttribute="height" constant="60" id="iY1-Sa-ryY"/>
+                                                    <constraint firstAttribute="width" constant="69" id="2mT-km-tvr"/>
+                                                    <constraint firstAttribute="height" constant="69" id="7yb-yD-FEm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="9">
@@ -463,10 +463,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3du-1f-heE" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="304.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="292" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="15Y-Vk-bel"/>
-                                                    <constraint firstAttribute="height" constant="60" id="D7V-uI-PiB"/>
+                                                    <constraint firstAttribute="width" constant="69" id="L0M-9X-nbY"/>
+                                                    <constraint firstAttribute="height" constant="69" id="llm-Ns-A2i"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="x">
@@ -522,22 +522,22 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Url-Yp-36K" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="EQx-3h-P7w"/>
-                                            <constraint firstItem="CDQ-Gc-h7c" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="PEU-2u-BXk"/>
-                                            <constraint firstItem="3du-1f-heE" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="Rtu-z2-YdY"/>
-                                            <constraint firstItem="CDQ-Gc-h7c" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="Ynn-M9-jWi"/>
-                                            <constraint firstItem="Url-Yp-36K" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="sFC-F1-JiU"/>
-                                            <constraint firstItem="3du-1f-heE" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="vv4-GY-aim"/>
+                                            <constraint firstItem="3du-1f-heE" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="8vD-jZ-pSJ"/>
+                                            <constraint firstItem="CDQ-Gc-h7c" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="NoS-Vz-GKi"/>
+                                            <constraint firstItem="Url-Yp-36K" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="QyM-yB-Vkz"/>
+                                            <constraint firstItem="Url-Yp-36K" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="n0k-2a-Z8H"/>
+                                            <constraint firstItem="CDQ-Gc-h7c" firstAttribute="height" secondItem="wcQ-G1-YeH" secondAttribute="height" id="p29-eL-3kY"/>
+                                            <constraint firstItem="3du-1f-heE" firstAttribute="width" secondItem="wcQ-G1-YeH" secondAttribute="width" id="vHm-Ib-TgL"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="b12-KT-CJd">
-                                        <rect key="frame" x="0.0" y="330" width="366" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="b12-KT-CJd">
+                                        <rect key="frame" x="0.0" y="327" width="366" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ou-Fa-vP5" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="SZy-YF-D2C"/>
-                                                    <constraint firstAttribute="width" constant="60" id="WmG-7J-kNz"/>
+                                                    <constraint firstAttribute="width" constant="69" id="EQ9-1J-NOe"/>
+                                                    <constraint firstAttribute="height" constant="69" id="tNs-wJ-xkj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="4">
@@ -592,10 +592,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-A2-ozZ" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="101.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="Zpe-O7-nFV"/>
-                                                    <constraint firstAttribute="width" constant="60" id="krQ-Od-j5a"/>
+                                                    <constraint firstAttribute="height" constant="69" id="FWE-Cw-9ue"/>
+                                                    <constraint firstAttribute="width" constant="69" id="i3j-rJ-WBa"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="5">
@@ -650,10 +650,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie3-Fj-w4T" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="194.5" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="THn-tK-y9G"/>
-                                                    <constraint firstAttribute="height" constant="60" id="vDd-MK-N0C"/>
+                                                    <constraint firstAttribute="width" constant="69" id="H8M-nV-tI6"/>
+                                                    <constraint firstAttribute="height" constant="69" id="leC-FE-EwJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="6">
@@ -708,10 +708,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moS-Ch-XRc" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="304.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="292" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="gmh-Ta-uc0"/>
-                                                    <constraint firstAttribute="width" constant="60" id="rwa-bs-cHM"/>
+                                                    <constraint firstAttribute="width" constant="69" id="CSj-d2-hN8"/>
+                                                    <constraint firstAttribute="height" constant="69" id="nf8-IN-IHY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="-">
@@ -767,22 +767,22 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="PB0-A2-ozZ" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="0s8-mq-Irg"/>
-                                            <constraint firstItem="Ie3-Fj-w4T" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="2Hh-qJ-6HC"/>
-                                            <constraint firstItem="PB0-A2-ozZ" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="9i7-7p-k3u"/>
-                                            <constraint firstItem="moS-Ch-XRc" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="QwD-mc-yVI"/>
-                                            <constraint firstItem="moS-Ch-XRc" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="Xkc-eF-Psa"/>
-                                            <constraint firstItem="Ie3-Fj-w4T" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="bvG-EC-H8B"/>
+                                            <constraint firstItem="PB0-A2-ozZ" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="4w9-VW-WS1"/>
+                                            <constraint firstItem="PB0-A2-ozZ" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="Fgo-Ze-fP2"/>
+                                            <constraint firstItem="moS-Ch-XRc" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="Oxh-v8-wRl"/>
+                                            <constraint firstItem="Ie3-Fj-w4T" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="TfU-Mb-WPW"/>
+                                            <constraint firstItem="moS-Ch-XRc" firstAttribute="width" secondItem="2Ou-Fa-vP5" secondAttribute="width" id="mfS-ND-PfF"/>
+                                            <constraint firstItem="Ie3-Fj-w4T" firstAttribute="height" secondItem="2Ou-Fa-vP5" secondAttribute="height" id="x9E-mh-fro"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-D9-SIH">
-                                        <rect key="frame" x="0.0" y="430" width="366" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="xIp-D9-SIH">
+                                        <rect key="frame" x="0.0" y="429" width="366" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfo-k9-agu" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="9Bh-k8-JSu"/>
-                                                    <constraint firstAttribute="height" constant="60" id="m55-Ph-CDZ"/>
+                                                    <constraint firstAttribute="height" constant="69" id="B5W-Dk-2LE"/>
+                                                    <constraint firstAttribute="width" constant="69" id="mFD-Ip-vXM"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="1">
@@ -837,10 +837,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1Q-nf-eri" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="101.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="7ju-Ny-bOC"/>
-                                                    <constraint firstAttribute="width" constant="60" id="tU9-60-vsu"/>
+                                                    <constraint firstAttribute="height" constant="69" id="P90-ku-l58"/>
+                                                    <constraint firstAttribute="width" constant="69" id="t9e-XG-uVg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="2">
@@ -895,10 +895,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-f8-p43" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="194.5" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="VoG-Wk-Yxf"/>
-                                                    <constraint firstAttribute="height" constant="60" id="ctT-aJ-5Gk"/>
+                                                    <constraint firstAttribute="height" constant="69" id="fdY-IP-ywL"/>
+                                                    <constraint firstAttribute="width" constant="69" id="mzi-pi-PNe"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="3">
@@ -953,10 +953,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qt-tu-g68" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="304.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="292" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="9ty-z7-w1o"/>
-                                                    <constraint firstAttribute="height" constant="60" id="uUE-VS-gWR"/>
+                                                    <constraint firstAttribute="height" constant="69" id="hDk-iR-DfI"/>
+                                                    <constraint firstAttribute="width" constant="69" id="tfp-ur-aVF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="+">
@@ -1012,22 +1012,22 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="eAb-f8-p43" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="EnL-8x-6IF"/>
-                                            <constraint firstItem="2qt-tu-g68" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="Mxq-hl-rn9"/>
-                                            <constraint firstItem="u1Q-nf-eri" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="dDN-Zx-xuw"/>
-                                            <constraint firstItem="u1Q-nf-eri" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="duJ-u9-b75"/>
-                                            <constraint firstItem="2qt-tu-g68" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="pue-ns-8io"/>
-                                            <constraint firstItem="eAb-f8-p43" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="szO-Bb-r9U"/>
+                                            <constraint firstItem="eAb-f8-p43" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="RWN-ox-Gjb"/>
+                                            <constraint firstItem="u1Q-nf-eri" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="Reo-57-87d"/>
+                                            <constraint firstItem="eAb-f8-p43" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="gUY-tl-cqs"/>
+                                            <constraint firstItem="2qt-tu-g68" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="qLr-G5-ZDw"/>
+                                            <constraint firstItem="2qt-tu-g68" firstAttribute="height" secondItem="Zfo-k9-agu" secondAttribute="height" id="ws0-hm-w9G"/>
+                                            <constraint firstItem="u1Q-nf-eri" firstAttribute="width" secondItem="Zfo-k9-agu" secondAttribute="width" id="ynV-gF-H6b"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="0Ju-BW-IKC">
-                                        <rect key="frame" x="0.0" y="530" width="366" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="0Ju-BW-IKC">
+                                        <rect key="frame" x="0.0" y="531" width="366" height="69"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykm-yS-oP2" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="oF1-hg-XeA"/>
-                                                    <constraint firstAttribute="width" constant="60" id="sdl-GE-tae"/>
+                                                    <constraint firstAttribute="height" constant="69" id="Njq-3s-TZY"/>
+                                                    <constraint firstAttribute="width" constant="69" id="brP-kr-Zhs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="00">
@@ -1079,10 +1079,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20U-pw-Bsz" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="101.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="ifn-b0-bMb"/>
-                                                    <constraint firstAttribute="height" constant="60" id="wGQ-cS-FNe"/>
+                                                    <constraint firstAttribute="height" constant="69" id="OJT-NL-HXg"/>
+                                                    <constraint firstAttribute="width" constant="69" id="VKI-dO-l1n"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="0">
@@ -1137,10 +1137,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y3-Pd-luW" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="194.5" y="0.0" width="74.5" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="JVZ-k3-trN"/>
-                                                    <constraint firstAttribute="height" constant="60" id="aXS-ta-Bt4"/>
+                                                    <constraint firstAttribute="width" constant="69" id="0GU-Ik-k3C"/>
+                                                    <constraint firstAttribute="height" constant="69" id="30b-GV-Wzc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title=".">
@@ -1192,10 +1192,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUZ-C0-U6E" customClass="NeumoButton" customModule="NeumoCalculator" customModuleProvider="target">
-                                                <rect key="frame" x="304.5" y="0.0" width="61.5" height="60"/>
+                                                <rect key="frame" x="292" y="0.0" width="74" height="69"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="Ew3-6m-IqX"/>
-                                                    <constraint firstAttribute="height" constant="60" id="VQ9-PK-7a7"/>
+                                                    <constraint firstAttribute="height" constant="69" id="7I6-NA-sn7"/>
+                                                    <constraint firstAttribute="width" constant="69" id="aZb-Wb-1DZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="=">
@@ -1251,12 +1251,12 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="4Y3-Pd-luW" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="3G6-0g-nbw"/>
-                                            <constraint firstItem="20U-pw-Bsz" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="5A4-MC-t7d"/>
-                                            <constraint firstItem="UUZ-C0-U6E" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="969-mo-Lyd"/>
-                                            <constraint firstItem="20U-pw-Bsz" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="JHi-3b-rX6"/>
-                                            <constraint firstItem="UUZ-C0-U6E" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="VpE-pZ-TRp"/>
-                                            <constraint firstItem="4Y3-Pd-luW" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="WUW-aT-Nya"/>
+                                            <constraint firstItem="UUZ-C0-U6E" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="7Cd-lz-hfw"/>
+                                            <constraint firstItem="UUZ-C0-U6E" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="BO5-fW-iUp"/>
+                                            <constraint firstItem="20U-pw-Bsz" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="FXn-mI-KbF"/>
+                                            <constraint firstItem="20U-pw-Bsz" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="Qh8-yJ-sae"/>
+                                            <constraint firstItem="4Y3-Pd-luW" firstAttribute="width" secondItem="Ykm-yS-oP2" secondAttribute="width" id="bWu-Bx-bE5"/>
+                                            <constraint firstItem="4Y3-Pd-luW" firstAttribute="height" secondItem="Ykm-yS-oP2" secondAttribute="height" id="z9k-th-CF6"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

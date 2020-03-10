@@ -49,9 +49,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
         
-        
+//        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
+//
 //        for b in buttons {
 //            let layer1 = CALayer()
 //            let layer2 = CALayer()

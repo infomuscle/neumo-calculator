@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var input2: String = ""
     var calType: String = ""
     
+    
+    
     @IBOutlet var vvBtn1: UIButton!
     
     // UI Variables
@@ -45,10 +47,15 @@ class ViewController: UIViewController {
     @IBOutlet var vBtnAc: UIButton!
     
     
+    
+    
     // UI Initializing
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let layerText: CATextLayer = lblResult.layer.sublayers?[2] as! CATextLayer
+//        layerText.string = "hihi"
+//        lblResult.layer.insertSublayer(layerText, at: 3)
         
 //        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
 //
@@ -146,6 +153,8 @@ class ViewController: UIViewController {
     
     func labeling(val: String) {
         lblResult.text = val
+        
+        
     }
     
     func initCalculator(initLabel: Bool) {

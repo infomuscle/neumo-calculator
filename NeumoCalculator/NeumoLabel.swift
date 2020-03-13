@@ -13,6 +13,7 @@ class NeumoLabel: UILabel {
     
     let layer1 = CALayer()
     let layer2 = CALayer()
+    let layerText = CATextLayer()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -28,7 +29,7 @@ class NeumoLabel: UILabel {
         layer1.shadowOpacity = shadowOpacity1
         layer1.shadowOffset = shadowOffset1
         layer1.shadowColor = shadowColor1.cgColor
-        self.layer.insertSublayer(layer1, at: 1)
+        self.layer.insertSublayer(layer1, at: 0)
         
         layer2.backgroundColor = self.backgroundColor?.cgColor
         layer2.frame = self.bounds
@@ -41,7 +42,19 @@ class NeumoLabel: UILabel {
         layer2.shadowOpacity = shadowOpacity2
         layer2.shadowOffset = shadowOffset2
         layer2.shadowColor = shadowColor2.cgColor
-        self.layer.insertSublayer(layer2, at: 2)
+        self.layer.insertSublayer(layer2, at: 1)
+        
+        layerText.frame = self.bounds
+        layerText.string = "0"
+        layerText.font = UIFont.systemFont(ofSize: 72.0)
+        layerText.fontSize = 72
+        layerText.foregroundColor = textColor.cgColor
+        layerText.alignmentMode = CATextLayerAlignmentMode.right
+        layerText.isWrapped = true
+
+        self.layer.insertSublayer(layerText, at: 2)
+        
+        
     }
     
     @IBInspectable var cornerRadius: CGFloat = 0{
@@ -115,4 +128,6 @@ class NeumoLabel: UILabel {
             self.backgroundColor = bgColor
         }
     }
+    
+//    @IBInspectable override var textColor: UICol
 }

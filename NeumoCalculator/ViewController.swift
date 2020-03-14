@@ -53,9 +53,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let layerText: CATextLayer = lblResult.layer.sublayers?[2] as! CATextLayer
-//        layerText.string = "hihi"
-//        lblResult.layer.insertSublayer(layerText, at: 3)
+
         
 //        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
 //
@@ -154,6 +152,10 @@ class ViewController: UIViewController {
     func labeling(val: String) {
         lblResult.text = val
         
+//        let layerText: CATextLayer = lblResult.layer.sublayers?[2] as! CATextLayer
+        let layerText = CATextLayer()
+        layerText.string = "hihi"
+        lblResult.layer.insertSublayer(layerText, at: 3)
         
     }
     

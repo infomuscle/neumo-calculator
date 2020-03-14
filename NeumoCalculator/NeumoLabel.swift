@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @IBDesignable
 class NeumoLabel: UILabel {
@@ -18,8 +19,12 @@ class NeumoLabel: UILabel {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        let size = self.frame.size
+//        self.clipsToBounds = true
+        
         layer1.backgroundColor = self.backgroundColor?.cgColor
         layer1.frame = self.bounds
+//        layer1.frame = CGRect(x: -3, y: -3, width: 366, height: 90)
         layer1.cornerRadius = cornerRadius
 //        layer1.shadowRadius = 3
 //        layer1.shadowOpacity = 1
@@ -33,6 +38,7 @@ class NeumoLabel: UILabel {
         
         layer2.backgroundColor = self.backgroundColor?.cgColor
         layer2.frame = self.bounds
+//        layer2.frame = CGRect(x: 3, y: 3, width: 366, height: 90)
         layer2.cornerRadius = cornerRadius
 //        layer2.shadowRadius = 3
 //        layer2.shadowOpacity = 1
@@ -51,8 +57,11 @@ class NeumoLabel: UILabel {
         layerText.foregroundColor = textColor.cgColor
         layerText.alignmentMode = CATextLayerAlignmentMode.right
         layerText.isWrapped = true
+//        layerText.setNeedsDisplay()
+//        layerText.setNeedsLayout()
 
         self.layer.insertSublayer(layerText, at: 2)
+        
         
         
     }

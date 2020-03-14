@@ -5,7 +5,7 @@
 // var op = "";
 //
 // function touchNumber(val) {
-//     if (result !== "" && input1 !== "") {
+//     if (result !== "" && input1 !== "" && op === "") {
 //         initCalculator();
 //     }
 //     if (op === "") {

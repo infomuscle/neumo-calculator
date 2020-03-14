@@ -38,6 +38,6 @@ html {
 .btn-neumo:focus {
     -webkit-appearance: none;
     opacity: 1;
-    -webkit-text-fill-color: yellow;
+    -webkit-text-fill-color: #4d6273;
     /*color: yellow;*/
 }

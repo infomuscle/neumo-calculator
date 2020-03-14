@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 import Foundation
 
 class ViewController: UIViewController {
@@ -47,40 +48,22 @@ class ViewController: UIViewController {
     @IBOutlet var vBtnAc: UIButton!
     
     
+    @IBOutlet var wkView: WKWebView!
     
     
     // UI Initializing
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let localFilePath = Bundle.main.path(forResource: "calculator", ofType: "html")
+
+        let url = URL(fileURLWithPath: localFilePath!)
+
+        let request = URLRequest(url: url)
+
+        wkView.load(request as URLRequest)
 
         
-//        let buttons = [vBtn1, vBtn2, vBtn3, vBtn4, vBtn5, vBtn6, vBtn7, vBtn8, vBtn9, vBtn0, vBtn00, vBtnPnt, vBtnEql, vBtnAdd, vBtnSub, vBtnMul, vBtnDiv, vBtnMod, vBtnPm, vBtnAc]
-//
-//        for b in buttons {
-//            let layer1 = CALayer()
-//            let layer2 = CALayer()
-//
-//            layer1.backgroundColor = self.view.backgroundColor?.cgColor
-//            layer1.frame = vBtn1.bounds
-//            layer1.cornerRadius = 16
-//            layer1.shadowRadius = 3
-//            layer1.shadowOpacity = 1
-//            layer1.shadowOffset = CGSize(width: 3, height: 3)
-//            layer1.shadowColor = UIColor.gray.cgColor
-//    //        layer1.needsDisplayOnBoundsChange = true
-//            b?.layer.insertSublayer(layer1, at: 0)
-//
-//            layer2.backgroundColor = self.view.backgroundColor?.cgColor
-//            layer2.frame = vBtn1.bounds
-//            layer2.cornerRadius = 16
-//            layer2.shadowRadius = 3
-//            layer2.shadowOpacity = 1
-//            layer2.shadowOffset = CGSize(width: -3, height: -3)
-//            layer2.shadowColor = UIColor.white.cgColor
-//    //        layer2.needsDisplayOnBoundsChange = true
-//            b?.layer.insertSublayer(layer2, at: 1)
-//        }
     }
 
     // UI Button Actions

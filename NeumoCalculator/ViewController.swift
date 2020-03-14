@@ -14,7 +14,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var wkView: WKWebView!
     
-    
     // UI Initializing
     override func viewDidLoad() {
         super.viewDidLoad()

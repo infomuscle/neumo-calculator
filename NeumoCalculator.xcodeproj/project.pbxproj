@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD8945DAC8623CF14760A519 /* calculator.js in Sources */ = {isa = PBXBuildFile; fileRef = AD8941AA17317396DD007834 /* calculator.js */; };
 		AD8947A63F6B9DA9C7BBBCA6 /* calculator.css in Resources */ = {isa = PBXBuildFile; fileRef = AD8947BEDC4A3FE01B54961B /* calculator.css */; };
 		B1483963241675C3004021CF /* NeumoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1483962241675C3004021CF /* NeumoButton.swift */; };
 		B148396524168884004021CF /* NeumoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148396424168884004021CF /* NeumoLabel.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD8941AA17317396DD007834 /* calculator.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = calculator.js; sourceTree = "<group>"; };
 		AD8947BEDC4A3FE01B54961B /* calculator.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = calculator.css; sourceTree = "<group>"; };
 		B1483962241675C3004021CF /* NeumoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumoButton.swift; sourceTree = "<group>"; };
 		B148396424168884004021CF /* NeumoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumoLabel.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				B17F07F32417EF6A00573D28 /* ContentView.swift */,
 				B17AAF5B241CC24C007C9F53 /* calculator.html */,
 				AD8947BEDC4A3FE01B54961B /* calculator.css */,
+				AD8941AA17317396DD007834 /* calculator.js */,
 			);
 			path = NeumoCalculator;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				B1E2E1BA2413FB0600C110AD /* ViewController.swift in Sources */,
 				B1E2E1B62413FB0600C110AD /* AppDelegate.swift in Sources */,
 				B1E2E1B82413FB0600C110AD /* SceneDelegate.swift in Sources */,
+				AD8945DAC8623CF14760A519 /* calculator.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,6 +34,14 @@ extension LinearGradient {
     }
 }
 
+
+//struct NeumoTextFieldStyle: TextFieldStyle {
+//    func makeBody(configuration: Self.Type) -> some View{
+//
+//    }
+//
+//}
+
 struct NeumoButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
@@ -49,24 +57,33 @@ struct NeumoButtonStyle: ButtonStyle {
                                         .fill(Color.background)
                                         .overlay(
                                                 RoundedRectangle(cornerRadius: 20)
-                                                        .stroke(Color.gray, lineWidth: 4)
-                                                        .blur(radius: 4)
-                                                        .offset(x: 2, y: 2)
-                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.black, Color.clear)))
+                                                        .stroke(Color.background, lineWidth: 4)
+                                                        .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
+                                                        .clipShape(
+                                                                RoundedRectangle(cornerRadius: 15)
+                                                        )
+                                                        .shadow(color: Color.white, radius: 3, x: -2, y: -2)
+                                                        .clipShape(
+                                                                RoundedRectangle(cornerRadius: 15)
+                                                        )
+//                                                        .stroke(Color.gray, lineWidth: 4)
+//                                                        .blur(radius: 4)
+//                                                        .offset(x: 2, y: 2)
+//                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.black, Color.clear)))
                                         )
-                                        .overlay(
-                                                RoundedRectangle(cornerRadius: 20)
-                                                        .stroke(Color.white, lineWidth: 8)
-                                                        .blur(radius: 4)
-                                                        .offset(x: -2, y: -2)
-                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.clear, Color.black)))
-                                        )
+//                                        .overlay(
+//                                                RoundedRectangle(cornerRadius: 20)
+//                                                        .stroke(Color.white, lineWidth: 8)
+//                                                        .blur(radius: 4)
+//                                                        .offset(x: -2, y: -2)
+//                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.clear, Color.black)))
+//                                        )
                             } else {
                                 RoundedRectangle(cornerRadius: 20)
                                         .fill(Color.background)
                                         .frame(width: 77, height: 77)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                                        .shadow(color: Color.black.opacity(0.2), radius: 3, x: 5, y: 5)
+                                        .shadow(color: Color.white.opacity(0.7), radius: 3, x: -2, y: -2)
                             }
                         }
                 )
@@ -81,6 +98,42 @@ struct ContentView: View {
             LinearGradient(Color.background, Color.background)
 
             VStack(spacing: 20) {
+
+                Text("0")
+                        .foregroundColor(Color.foreground)
+                        .padding(10)
+                        .font(.system(size: 64))
+                        .frame(width: 375, height: 99, alignment: .trailing)
+                        .contentShape(RoundedRectangle(cornerRadius: 15))
+                        .background(
+                                RoundedRectangle(cornerRadius: 15)
+                                        .fill(Color.background)
+                                        .overlay(
+                                                RoundedRectangle(cornerRadius: 15)
+                                                        .stroke(Color.background, lineWidth: 4)
+                                                        .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
+                                                        .clipShape(
+                                                                RoundedRectangle(cornerRadius: 15)
+                                                        )
+                                                        .shadow(color: Color.white, radius: 3, x: -2, y: -2)
+                                                        .clipShape(
+                                                                RoundedRectangle(cornerRadius: 15)
+                                                        )
+
+//                                                        .stroke(Color.gray, lineWidth: 4)
+//                                                        .blur(radius: 4)
+//                                                        .offset(x: 10, y: 10)
+//                                                        .mask(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(Color.black, Color.clear)))
+                                        )
+//                                        .overlay(
+//                                                RoundedRectangle(cornerRadius: 15)
+//                                                        .stroke(Color.white, lineWidth: 8)
+//                                                        .blur(radius: 4)
+//                                                        .offset(x: -10, y: -10)
+//                                                        .mask(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(Color.clear, Color.black)))
+//                                        )
+                        )
+
                 HStack(spacing: 20) {
                     Button(action: {
                         print("Button AC tapped")

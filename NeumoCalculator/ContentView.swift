@@ -1,21 +1,18 @@
 //
 //  ContentView.swift
-//  Neumorphism
+//  NeumoCalculator
 //
-//  Created by Paul Hudson on 25/02/2020.
-//  Copyright © 2020 Paul Hudson. All rights reserved.
+//  Created by 정보근 on 2020/03/08.
+//  Copyright © 2020 Bokeun Jeong. All rights reserved.
 //
 
 import SwiftUI
 
 extension Color {
-
     // #dfdfdf
     static let background = Color(red: 223 / 255, green: 223 / 255, blue: 223 / 255)
-
     // shadow
     static let grayShadow = Color(red: 190 / 255, green: 190 / 255, blue: 190 / 255)
-
     // navy
     static let foreground = Color(red: 52/255, green: 57/255, blue: 133/255)
 }
@@ -76,7 +73,7 @@ struct ContentView: View {
     @State var numbers: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "00"]
     @State var operators: [String] = ["ADD","SUB","MUL","DIV","MOD","EQL","PNT","PM","AC",]
 
-    @State var result: String = ""
+    @State var result: String = "0"
     @State var input1: String = "0"
     @State var input2: String = ""
     @State var op: String = ""
@@ -133,27 +130,40 @@ struct ContentView: View {
 
     // Button Controller
     func touchCommon(val: String) {
-        if numbers.contains(val) {
+        if (numbers.contains(val)) {
             touchNumber(val: val)
-        } else if operators.contains(val) && val != "PM" {
-            touchOperation(val: val)
-        } else {
+        } else if (val == "AC") {
+            touchAllClear()
+        } else if (val == "PM") {
             touchPlusMinus()
+        } else if (val == "PNT") {
+            print("touchPoint()")
+            touchPoint()
+        } else {
+            touchOperation(val: val)
         }
     }
 
-    // Action When Touch 0~9 Buttons
+    // Touch Action for 0~9 Buttons
     func touchNumber(val: String) {
+
+        // New Calculation Start After EQL Operation
         if (result != "" && input1 != "" && op == "") {
             initCalculator()
         }
+
+        // Before Touch Operator Button Input1 is Set
         if (op == "") {
-            if input1 == "0" {
+            // Initializing Before First Touch for Input1
+            if (input1 == "0") {
                 input1 = ""
             }
             input1  += val
             updateDisplay(val: input1)
-        } else {
+        }
+
+        // After Touch Operator Button Input2 is Set
+        else {
             input2 += val
             updateDisplay(val: input2)
         }
@@ -161,13 +171,33 @@ struct ContentView: View {
         log()
     }
 
-    // Action When Touch Operator Buttons
-    func touchOperation(val: String) {
-        if (val == "AC") {
-            initCalculator()
-            log()
-            return
+    // Touch Action for AC Button
+    func touchAllClear(){
+        initCalculator()
+        log()
+    }
+
+    // Touch Action for +/- Button
+    func touchPlusMinus() {
+        if (input2 == "") {
+            result = String(Int(result)! * (-1))
+            input1 = String(Int(input1)! * (-1))
+            updateDisplay(val: result)
+        } else {
+            input2 = String(Int(input2)! * (-1))
+            updateDisplay(val: input2)
         }
+
+        log()
+    }
+
+    // Touch Action for . Button
+    func touchPoint() {
+
+    }
+
+    // Touch Action for Operator Buttons[ADD, SUB, MUL, DIV, MOD, EQL]
+    func touchOperation(val: String) {
 
         if (val != "EQL") {
             op = val
@@ -199,7 +229,7 @@ struct ContentView: View {
             updateDisplay(val: result)
         }
 
-        if (input2 != "" && val == "eql") {
+        if (input2 != "" && val == "EQL") {
             op = ""
             input1 = result
             input2 = ""
@@ -211,13 +241,6 @@ struct ContentView: View {
         log()
     }
 
-    // Action When Touch +/- Button
-    func touchPlusMinus() {
-        result = String(Int(result)! * (-1))
-        updateDisplay(val: result)
-        log()
-    }
-
     // Set Display Value
     func updateDisplay(val: String) {
         display = val
@@ -225,7 +248,7 @@ struct ContentView: View {
 
     // Initialize Variables
     func initCalculator() {
-        result = ""
+        result = "0"
         input1 = "0"
         input2 = ""
         op = ""
@@ -234,12 +257,7 @@ struct ContentView: View {
 
     // Logger for Debugging
     func log() {
-        print("result : " + result)
-        print("input1 : " + input1)
-        print("input2 : " + input2)
-        print("op : " + op)
-        print("display : " + display)
-        print("------------------")
+        print("result: \(result) | input1: \(input1) | input2: \(input2) | op: \(op) | display: \(display)")
     }
 }
 

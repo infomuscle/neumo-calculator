@@ -13,7 +13,9 @@
 #### Functions to Complete
 
 - Point Button Function for Float
+- Operation Priority
 - Button Touch Animation
+- Arrange Test Case
 
 ---
 

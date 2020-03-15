@@ -148,7 +148,7 @@ struct ContentView: View {
     func touchNumber(val: String) {
 
         // New Calculation Start After EQL Operation
-        if (result != "" && input1 != "" && op == "") {
+        if (result != "0" && input1 != "0" && op == "") {
             initCalculator()
         }
 
@@ -225,7 +225,7 @@ struct ContentView: View {
             }
         }
 
-        if (input1 != "" && input2 != "") {
+        if (input1 != "0" && input2 != "") {
             updateDisplay(val: result)
         }
 

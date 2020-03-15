@@ -5,6 +5,7 @@
 //  Created by Paul Hudson on 25/02/2020.
 //  Copyright © 2020 Paul Hudson. All rights reserved.
 //
+
 import SwiftUI
 
 extension Color {
@@ -17,15 +18,6 @@ extension Color {
 
     // navy
     static let foreground = Color(red: 52/255, green: 57/255, blue: 133/255)
-
-
-    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
-
-    static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
-    static let darkEnd = Color(red: 25 / 255, green: 25 / 255, blue: 30 / 255)
-
-    static let lightStart = Color(red: 60 / 255, green: 160 / 255, blue: 240 / 255)
-    static let lightEnd = Color(red: 30 / 255, green: 80 / 255, blue: 120 / 255)
 }
 
 extension LinearGradient {
@@ -33,14 +25,6 @@ extension LinearGradient {
         self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
-
-
-//struct NeumoTextFieldStyle: TextFieldStyle {
-//    func makeBody(configuration: Self.Type) -> some View{
-//
-//    }
-//
-//}
 
 struct NeumoButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
@@ -66,18 +50,7 @@ struct NeumoButtonStyle: ButtonStyle {
                                                         .clipShape(
                                                                 RoundedRectangle(cornerRadius: 15)
                                                         )
-//                                                        .stroke(Color.gray, lineWidth: 4)
-//                                                        .blur(radius: 4)
-//                                                        .offset(x: 2, y: 2)
-//                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.black, Color.clear)))
                                         )
-//                                        .overlay(
-//                                                RoundedRectangle(cornerRadius: 20)
-//                                                        .stroke(Color.white, lineWidth: 8)
-//                                                        .blur(radius: 4)
-//                                                        .offset(x: -2, y: -2)
-//                                                        .mask(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(Color.clear, Color.black)))
-//                                        )
                             } else {
                                 RoundedRectangle(cornerRadius: 20)
                                         .fill(Color.background)
@@ -91,13 +64,22 @@ struct NeumoButtonStyle: ButtonStyle {
 }
 
 struct ContentView: View {
-    @State private var isToggled = false
+
+    @State var keyboard = [
+        [["AC", "AC"], ["+/-", "PM"], ["%", "MOD"], ["÷", "DIV"]],
+        [["7", "7"], ["8", "8"], ["9", "9"], ["×", "MUL"]], 
+        [["4", "4"], ["5", "5"], ["6", "6"], ["−", "SUB"]], 
+        [["1", "1"], ["2", "2"], ["3", "3"], ["+", "ADD"]], 
+        [["00", "00"], ["0", "0"], [".", "PNT"], ["=", "EQL"]]
+    ]
 
     var body: some View {
         ZStack {
             LinearGradient(Color.background, Color.background)
 
             VStack(spacing: 20) {
+
+                Spacer()
 
                 Text("0")
                         .foregroundColor(Color.foreground)
@@ -119,171 +101,22 @@ struct ContentView: View {
                                                         .clipShape(
                                                                 RoundedRectangle(cornerRadius: 15)
                                                         )
-
-//                                                        .stroke(Color.gray, lineWidth: 4)
-//                                                        .blur(radius: 4)
-//                                                        .offset(x: 10, y: 10)
-//                                                        .mask(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(Color.black, Color.clear)))
                                         )
-//                                        .overlay(
-//                                                RoundedRectangle(cornerRadius: 15)
-//                                                        .stroke(Color.white, lineWidth: 8)
-//                                                        .blur(radius: 4)
-//                                                        .offset(x: -10, y: -10)
-//                                                        .mask(RoundedRectangle(cornerRadius: 15).fill(LinearGradient(Color.clear, Color.black)))
-//                                        )
                         )
 
-                HStack(spacing: 20) {
-                    Button(action: {
-                        print("Button AC tapped")
-                    }) {
-                        Text("AC")
+                    ForEach(keyboard, id: \.self) { line in
+                        HStack(spacing: 20) {
+                            ForEach(line, id: \.self) { key in
+                                Button(action: {
+                                    print("Button \(key[1]) tapped")
+                                }) {
+                                    Text(key[0])
+                                }.buttonStyle(NeumoButtonStyle())
+                            }
+                        }
                     }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button PM tapped")
-                    }) {
-                        Text("+/-")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button MOD tapped")
-                    }) {
-                        Text("%")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button DIV tapped")
-                    }) {
-                        Text("÷")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-                }
-
-                HStack(spacing: 20) {
-                    Button(action: {
-                        print("Button 7 tapped")
-                    }) {
-                        Text("7")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 8 tapped")
-                    }) {
-                        Text("8")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 9 tapped")
-                    }) {
-                        Text("9")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button MUL tapped")
-                    }) {
-                        Text("×")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-                }
-
-                HStack(spacing: 20) {
-                    Button(action: {
-                        print("Button 4 tapped")
-                    }) {
-                        Text("4")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 5 tapped")
-                    }) {
-                        Text("5")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 6 tapped")
-                    }) {
-                        Text("6")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button SUB tapped")
-                    }) {
-                        Text("−")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-                }
-
-                HStack(spacing: 20) {
-                    Button(action: {
-                        print("Button 1 tapped")
-                    }) {
-                        Text("1")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 2 tapped")
-                    }) {
-                        Text("2")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 3 tapped")
-                    }) {
-                        Text("3")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button ADD tapped")
-                    }) {
-                        Text("+")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-                }
-
-                HStack(spacing: 20) {
-                    Button(action: {
-                        print("Button 00 tapped")
-                    }) {
-                        Text("00")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button 0 tapped")
-                    }) {
-                        Text("0")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button PNT tapped")
-                    }) {
-                        Text(".")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-
-                    Button(action: {
-                        print("Button EQL tapped")
-                    }) {
-                        Text("=")
-                    }
-                            .buttonStyle(NeumoButtonStyle())
-                }
             }
+            .padding(.bottom, 50)
         }
                 .edgesIgnoringSafeArea(.all)
     }

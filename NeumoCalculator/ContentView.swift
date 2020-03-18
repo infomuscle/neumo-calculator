@@ -36,16 +36,17 @@ struct NeumoButtonStyle: ButtonStyle {
                             if configuration.isPressed {
                                 RoundedRectangle(cornerRadius: 20)
                                         .fill(Color.background)
+                                        .frame(width: 81, height: 81)
                                         .overlay(
                                                 RoundedRectangle(cornerRadius: 20)
                                                         .stroke(Color.background, lineWidth: 4)
                                                         .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
                                                         .clipShape(
-                                                                RoundedRectangle(cornerRadius: 15)
+                                                                RoundedRectangle(cornerRadius: 20)
                                                         )
                                                         .shadow(color: Color.white, radius: 3, x: -2, y: -2)
                                                         .clipShape(
-                                                                RoundedRectangle(cornerRadius: 15)
+                                                                RoundedRectangle(cornerRadius: 20)
                                                         )
                                         )
                             } else {

@@ -37,6 +37,7 @@ struct NeumoButtonStyle: ButtonStyle {
                                 RoundedRectangle(cornerRadius: 20)
                                         .fill(Color.background)
                                         .frame(width: 81, height: 81)
+//                                        .frame(width: 77, height: 77)
                                         .overlay(
                                                 RoundedRectangle(cornerRadius: 20)
                                                         .stroke(Color.background, lineWidth: 4)
@@ -58,6 +59,9 @@ struct NeumoButtonStyle: ButtonStyle {
                             }
                         }
                 )
+//                .scaleEffect(configuration.isPressed ? 0.98:1.0)
+                .scaleEffect(configuration.isPressed ? 0.975:1.0)
+//                .animation(.easeInOut)
     }
 }
 

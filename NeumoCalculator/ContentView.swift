@@ -81,6 +81,9 @@ struct ContentView: View {
     @State var op: String = ""
     @State var display: String = "0"
 
+
+    @State var stack: [String] = []
+
     var body: some View {
         ZStack {
             LinearGradient(Color.background, Color.background)
@@ -131,7 +134,6 @@ struct ContentView: View {
 
     // Button Controller
     func touchCommon(val: String) {
-//        print("Button \(val) tapped")
         if (numbers.contains(val)) {
             touchNumber(val: val)
         } else if (val == "AC") {

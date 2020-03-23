@@ -73,7 +73,7 @@ struct ContentView: View {
     ]
 
     @State var numbers: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "00"]
-    @State var operators: [String] = ["ADD","SUB","MUL","DIV","MOD","EQL","PNT","PM","AC",]
+    @State var operators: [String] = ["ADD","SUB","MUL","DIV","MOD","EQL","PNT","PM","AC"]
 
     @State var result: String = "0"
     @State var input1: String = "0"
@@ -83,6 +83,7 @@ struct ContentView: View {
 
 
     @State var stack: [String] = []
+    @State var temp: String
 
     var body: some View {
         ZStack {
@@ -202,6 +203,8 @@ struct ContentView: View {
 
     // Touch Action for Operator Buttons[ADD, SUB, MUL, DIV, MOD, EQL]
     func touchOperation(val: String) {
+
+        // +, - 눌렀을 때랑 *, / 눌렀을 때랑 디스플레이가 다름
 
         if (val != "EQL") {
             op = val

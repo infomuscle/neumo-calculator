@@ -152,26 +152,6 @@ struct ContentView: View {
     // Touch Action for 0~9 Buttons
     func touchNumber(val: String) {
 
-        // New Calculation Start After EQL Operation
-        if (result != "0" && input1 != "0" && op == "") {
-            initCalculator()
-        }
-
-        // Before Touch Operator Button Input1 is Set
-        if (op == "") {
-            // Initializing Before First Touch for Input1
-            if (input1 == "0") {
-                input1 = ""
-            }
-            input1  += val
-            updateDisplay(val: input1)
-        }
-
-        // After Touch Operator Button Input2 is Set
-        else {
-            input2 += val
-            updateDisplay(val: input2)
-        }
 
         log()
     }
@@ -184,66 +164,19 @@ struct ContentView: View {
 
     // Touch Action for +/- Button
     func touchPlusMinus() {
-        if (input2 == "") {
-            result = String(Int(result)! * (-1))
-            input1 = String(Int(input1)! * (-1))
-            updateDisplay(val: result)
-        } else {
-            input2 = String(Int(input2)! * (-1))
-            updateDisplay(val: input2)
-        }
+
 
         log()
     }
 
     // Touch Action for . Button
     func touchPoint() {
-
+        log()
     }
 
     // Touch Action for Operator Buttons[ADD, SUB, MUL, DIV, MOD, EQL]
     func touchOperation(val: String) {
 
-        // +, - 눌렀을 때랑 *, / 눌렀을 때랑 디스플레이가 다름
-
-        if (val != "EQL") {
-            op = val
-        }
-
-        if (input2 != "") {
-            switch (op) {
-            case "ADD":
-                result = String(Int(input1)! + Int(input2)!)
-                break
-            case "SUB":
-                result = String(Int(input1)! - Int(input2)!)
-                break
-            case "MUL":
-                result = String(Int(input1)! * Int(input2)!)
-                break
-            case "DIV":
-                result = String(Int(input1)! / Int(input2)!)
-                break
-            case "MOD":
-                result = String(Int(input1)! % Int(input2)!)
-                break
-            default:
-                break
-            }
-        }
-
-        if (input1 != "0" && input2 != "") {
-            updateDisplay(val: result)
-        }
-
-        if (input2 != "" && val == "EQL") {
-            op = ""
-            input1 = result
-            input2 = ""
-        } else if (input2 != "") {
-            input1 = result
-            input2 = ""
-        }
 
         log()
     }
@@ -255,11 +188,7 @@ struct ContentView: View {
 
     // Initialize Variables
     func initCalculator() {
-        result = "0"
-        input1 = "0"
-        input2 = ""
-        op = ""
-        updateDisplay(val: "0")
+
     }
 
     // Logger for Debugging

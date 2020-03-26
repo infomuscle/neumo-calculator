@@ -76,14 +76,12 @@ struct ContentView: View {
     @State var operators: [String] = ["ADD","SUB","MUL","DIV","MOD","EQL","PNT","PM","AC"]
 
     @State var result: String = "0"
-    @State var input1: String = "0"
-    @State var input2: String = ""
+    @State var input: String = ""
     @State var op: String = ""
-    @State var display: String = "0"
+    @State var display: String = "0" 
 
-
-    @State var stack: [String] = []
-    @State var temp: String
+    @State var numStack: [String] = []
+    @State var opStack: [String] = []
 
     var body: some View {
         ZStack {
@@ -152,6 +150,10 @@ struct ContentView: View {
     // Touch Action for 0~9 Buttons
     func touchNumber(val: String) {
 
+        if (val != "0" || input != "") {
+            input += val
+            updateDisplay(val: input)
+        }
 
         log()
     }
@@ -177,6 +179,23 @@ struct ContentView: View {
     // Touch Action for Operator Buttons[ADD, SUB, MUL, DIV, MOD, EQL]
     func touchOperation(val: String) {
 
+        if (input != "") {
+            numStack.append(input)
+            input = ""
+        }
+
+        opStack.append(val)
+        if (val == "ADD" || val == "SUB") {
+            opStack.append(val)
+
+        } else if (val == "MUL" || val == "DIV") {
+
+        } else if( val == "EQL") {
+
+        }
+
+
+
 
         log()
     }
@@ -188,12 +207,19 @@ struct ContentView: View {
 
     // Initialize Variables
     func initCalculator() {
+        result = "0"
+        input = ""
+        op = ""
+        display = "0"
 
+        numStack = []
+        opStack = []
     }
 
     // Logger for Debugging
     func log() {
-        print("result: \(result) | input1: \(input1) | input2: \(input2) | op: \(op) | display: \(display)")
+//        print("result: \(result) | input1: \(input1) | input2: \(input2) | op: \(op) | display: \(display)")
+        print("result: \(result) | input: \(input) | op: \(op) | display: \(display)")
     }
 }
 
